@@ -12,7 +12,7 @@
       ]
     }
   },
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install --legacy-peer-deps",
   "forwardPorts": [3000],
   "portsAttributes": {
     "3000": {

@@ -6,7 +6,10 @@ Félicitations ! Vous venez d’être embauché en tant que développeur fronten
 
 Mais… mauvaise nouvelle. L’équipe précédente est partie brusquement, laissant derrière elle un code source rempli de bugs et d’incohérences. Vous devez reprendre le projet, corriger les erreurs et implémenter de nouvelles fonctionnalités.
 
-🤖 **Heureusement, vous avez une idée de génie** : pour éviter de tout faire à la main, vous allez créer des **agents IA** avec **GenAI Script** pour vous assister dans chaque tâche !
+🤖 **Heureusement, vous avez une idée de génie** : pour éviter de tout faire à la main, vous allez créer des **agents IA** avec **GenAIScript** pour vous assister dans chaque tâche !
+
+"Qu'est-ce que GenAIScript ", vous vous demandez ? Ne vous inquiétez pas ! Votre prédécesseur, ayant prévu le coup, vous a préparé une [documentation](genaisrc/README.md), ainsi que des [scripts](genaisrc/examples) pour vous aider à commencer.
+Il vous a même laissé un premier agent débuggueur qui vous permettra de réaliser la première tâche du dojo !
 
 📌 **Votre mission :**
 
@@ -16,7 +19,6 @@ Mais… mauvaise nouvelle. L’équipe précédente est partie brusquement, lais
 5. [Assurer la qualité du code avec un **agent de revue de code**](instructions/Phase4_Code_Review.md)
 2. [Générer automatiquement une documentation avec un **agent de documentation**](instructions/Phase5_Documentation.md)
 
-**Mais avant tout !** Allez faire un tour dans le dossier [genaisrc](genaisrc/README.md). Vous y trouverez des aides pour vous initier à GenAI Script et, si vous êtes vraiment perdus, des propositions de solutions.
 
 Et finalement, n'oubliez pas que **vous pouvez demander de l'aide à tout moment**. Levez simplement la main et on viendra répondre à vos questions :)
 

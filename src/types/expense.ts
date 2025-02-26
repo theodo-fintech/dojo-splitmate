@@ -1,4 +1,9 @@
-import { Participant } from "./user";
+import { User, Participant } from './user';
+
+export interface ExpenseParticipant {
+  user: User;
+  paid: boolean;
+}
 
 export interface ExpenseDTO {
   id: string;

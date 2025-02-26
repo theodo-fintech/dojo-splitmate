@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
-import { Card, CardContent, Typography, Avatar, AvatarGroup, Chip } from '@mui/material';
+import { Card, CardContent, Typography, AvatarGroup, Avatar, Chip } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { Expense } from '../../types';
 import { formatCurrency } from '../../utils/formatters';
@@ -8,14 +8,11 @@ import { DateFormats } from '../../constants/messages';
 
 const StyledCard = styled(Card)(({ theme }) => ({
   marginBottom: theme.spacing(2),
-  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+  transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
   position: 'relative',
-  overflow: 'visible',
+  overflow: 'hidden',
   '&:hover': {
-    transform: 'translateY(-4px)',
-    '&::after': {
-      opacity: 1,
-    },
+    transform: 'scale(1.03)',
   },
   '&::after': {
     content: '""',
@@ -25,9 +22,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
     width: '100%',
     height: '100%',
     borderRadius: theme.shape.borderRadius,
-    boxShadow: '0 8px 24px rgba(0, 191, 165, 0.15)',
-    opacity: 0,
-    transition: 'opacity 0.3s ease-in-out',
+    boxShadow: '0 4px 12px rgba(0, 191, 165, 0.1)',
     zIndex: -1,
   },
 }));
@@ -69,6 +64,16 @@ const ParticipantsSection = styled('div')(({ theme }) => ({
 interface ExpenseCardProps {
   expense: Expense;
 }
+
+const getInitials = (email: string) => {
+  const [localPart] = email.split('@');
+  if (localPart.includes('.')) {
+    return localPart.split('.')
+      .map(part => part.charAt(0).toUpperCase())
+      .join('');
+  }
+  return localPart.charAt(0).toUpperCase();
+};
 
 export const ExpenseCard: FC<ExpenseCardProps> = memo(({ expense }) => {
   const { name, amount, expenseDate, participants } = expense;
@@ -124,7 +129,7 @@ export const ExpenseCard: FC<ExpenseCardProps> = memo(({ expense }) => {
                     : 'linear-gradient(45deg, #9E9E9E 30%, #BDBDBD 90%)',
                 }}
               >
-                {participant.user.email[0].toUpperCase()}
+                {getInitials(participant.user.email)}
               </Avatar>
             ))}
           </AvatarGroup>

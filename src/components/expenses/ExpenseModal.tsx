@@ -9,6 +9,7 @@ import {
   DialogActions,
   Paper,
   Alert,
+  DialogContentText,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useUsers } from "../../hooks";
@@ -127,17 +128,19 @@ export const ExpenseModal: FC<ExpenseModalProps> = ({
 
         <DialogContent>
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 2 }}>
-            {(error || usersError) && (
+            {(error || usersError ? (
               <Alert severity="error" sx={{ mt: 2, mb: 1 }}>
                 {error || usersError}
               </Alert>
-            )}
+            ) : <DialogContentText id="feature-coming-soon">
+            Cette fonctionnalité n'existe pas encore, mais elle sera bientôt disponible.
+          </DialogContentText>)}
           </Box>
         </DialogContent>
 
         <DialogActions sx={{ p: 3, pt: 0 }}>
           <Button onClick={onClose}>Annuler</Button>
-          <Button onClick={handleSubmit} variant="contained" disabled={loading}>
+          <Button onClick={handleSubmit} variant="contained" disabled={true}>
             {loading ? "Création..." : "Ajouter"}
           </Button>
         </DialogActions>

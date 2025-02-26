@@ -7,9 +7,9 @@
 > Vous devez ajouter un **système de regroupement des dépenses** et un **tri dynamique**, ainsi qu'une fonctionnalité pour **ajouter une dépense**.. Maintenant que vous avez pris goût à l’utilisation des agents, pourquoi ne pas créer un **agent IA capable de générer le code** pour vous ?
 
 _Fonctionnalité 1_:
-- ETQUtilisateur, sur la page 'Dépenses', je vois toutes les dépenses de mon groupe regroupées par date, de la plus récente à la plus ancienne
-- Chaque groupe a un intitulé avec la date des dépenses
-- Au sein d'un même groupe, les dépenses sont triées alphabétiquement.
+- ETQUtilisateur, sur la page 'Dépenses', je vois toutes les dépenses regroupées par date, de la plus récente à la plus ancienne
+- Les dépenses ayant eu lieu a la même date forment un groupe, ayant pour intitulé la date de dépense.
+- Au sein d'un même groupe, les dépenses sont triées par prix décroissant.
 
 _Fonctionnalité 2_:
 - ETQUtilisateur, sur la page 'Dépenses', lorsque je click sur 'Ajouter une dépense', je vois un formulaire de soumission de dépense apparaître
@@ -30,3 +30,4 @@ _Fonctionnalité 2_:
     - Il vous propose différents choix d'implémentations
     - Il vous propose du code en fonction de votre choix
 
+Vous pouvez écrire vos scripts dans le dossier [genaisrc/my-scripts](/genaisrc/my-scripts/). Et n'oubliez pas, le nom de vos fichiers de scripts doit finir par `.genai.mts`.
