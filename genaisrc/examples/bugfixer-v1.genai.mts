@@ -1,6 +1,6 @@
 script({
     model: 'anthropic:claude-3-5-sonnet-20240620',
-    files: '**/*.tsx'
+    files: 'src/**/*.{tsx,ts}',
 })
 
 const actualBehavior = host.input('Describe the actual behavior from the user point of view')
