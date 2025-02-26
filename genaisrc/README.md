@@ -12,7 +12,7 @@ Pour vous familiariser avec GenAIScript, commençons par exécuter un script sim
 
 Dans votre terminal exécutez la commande suivante:
 ```bash
-    npx genaiscript run genaisrc/helloWorld.genai.mts
+    npx genaiscript run genaisrc/examples/helloWorld.genai.mts
 ```
 Vous devriez voir sous peu un poème à propos du code, fraîchement généré par ChatGPT-4o.
 
